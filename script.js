@@ -12,6 +12,10 @@ function createGrid(n) {
             cell.classList.add('cell');
             cell.style.width = `${420 / n}px`;
             cell.style.height = `${420 / n}px`;
+
+            cell.addEventListener('mouseenter', e => {
+                cell.classList.add('traveled');
+            })
             gridRow.appendChild(cell);
         }
         grid.appendChild(gridRow);
@@ -22,8 +26,8 @@ function createGrid(n) {
 
 createGrid(16);
 
-// change color on enter
-const cells = document.querySelectorAll('.cell');
-cells.forEach(cell => cell.addEventListener('mouseenter', function(e) {
-    cell.classList.add('traveled');
-}));
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', e => {
+    let n = +prompt("Enter the number of squares per side");
+    createGrid(n);
+});
