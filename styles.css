@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 420px;
+}
+
+.cell {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.traveled {
+    background-color: black;
+}
+
+.btn {
+    margin-bottom: 16px;
+}
